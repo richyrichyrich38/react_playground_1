@@ -23,11 +23,11 @@ function App() {
 
   return (
     <>
-      <Header title={title}/>
+      <Header title={title} setPage={setPage}/>
 
       {/* <Counter /> */}
 
-      {page === 'home' ? <Home title={title}/> : <Contact />}
+      {handlePageView()}
 
     </>
     

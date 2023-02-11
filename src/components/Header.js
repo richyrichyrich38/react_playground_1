@@ -1,11 +1,11 @@
-function Header(prop) {
+function Header(props) {
   return (
     <>
       <header>
-        <h3>{prop.title}</h3>
+        <h3>{props.title}</h3>
         <nav>
-          <a href="#">Home</a>
-          <a href="#">Contact</a>
+          <button onClick={() => props.setPage('home')}>Home</button>
+          <button onClick={() => props.setPage('contact')}>Contact</button>
         </nav>
       </header>
     </>
