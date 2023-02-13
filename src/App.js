@@ -6,29 +6,25 @@ import Contact from './pages/Contact';
 
 import Header from './components/Header';
 import Counter from './components/Counter';
+import NotFound from './pages/NotFound';
 
 
 
 function App() {
   const title = 'React Overview'
-  const [page, setPage] = useState('home')
-
-  const handlePageView = () => {
-    switch(page) {
-      case 'home' :
-        return <Home title={title}/>
-      case 'contact' :
-        return <Contact />
-    }
-  }
+  
 
   return (
     <>
-      <Header title={title} setPage={setPage}/>
+      <Header title={title} />
 
       {/* <Counter /> */}
 
-      {handlePageView()}
+      <Routes>
+        <Route path='/' element={<Home title={title} />}/>
+        <Route path='/contact' element={<Contact title={title} />}/>
+        <Route path='*' element={<NotFound />}/>
+      </Routes>
 
     </>
     

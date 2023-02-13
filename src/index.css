@@ -20,15 +20,16 @@ header {
   padding: 10px 3%;
 }
 
-header nav button {
+header nav a {
   color: #fff;
+  text-decoration: none;
   background: none;
   border: none;
   font-size: .95rem;
   cursor: pointer;
 }
 
-header nav button:not(:last-child) {
+header nav a:not(:last-child) {
   margin-right: 10px;
 }
 
